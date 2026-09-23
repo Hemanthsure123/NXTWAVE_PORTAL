@@ -1,0 +1,171 @@
+/* Plain and light. Enough structure to read easily, nothing more. */
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #1f2430;
+    background: #f5f6f8;
+}
+
+a { color: #1a56c4; }
+
+/* ---- header / footer ---- */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 28px;
+    background: #10233f;
+    color: #fff;
+}
+.site-header a { color: #fff; text-decoration: none; margin-left: 18px; }
+.site-header a:hover { text-decoration: underline; }
+.site-header .brand { font-weight: 600; letter-spacing: .2px; }
+.site-header .who { opacity: .7; font-size: 14px; }
+
+.site-footer {
+    text-align: center;
+    color: #9aa1ad;
+    font-size: 13px;
+    padding: 30px 16px;
+}
+
+/* ---- layout ---- */
+
+.page {
+    max-width: 680px;
+    margin: 36px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 22px; margin: 0 0 6px; font-weight: 600; }
+h2 { font-size: 16px; margin: 28px 0 4px; font-weight: 600; }
+h2:first-of-type { margin-top: 8px; }
+.subtitle { color: #6b7280; margin: 0 0 22px; }
+
+/* ---- landing page ---- */
+
+.intro { text-align: center; margin-bottom: 26px; }
+.intro h1 { font-size: 26px; }
+.intro p { color: #6b7280; margin: 0; }
+
+.choices { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.choice {
+    flex: 1 1 260px;
+    background: #fff;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .15s, box-shadow .15s;
+}
+.choice:hover {
+    border-color: #1a56c4;
+    box-shadow: 0 2px 10px rgba(16, 35, 63, .08);
+}
+.choice h2 { margin: 0 0 6px; font-size: 17px; }
+.choice p { margin: 0 0 16px; color: #6b7280; font-size: 14px; }
+.choice-action { color: #1a56c4; font-size: 14px; font-weight: 600; }
+
+.footnote { text-align: center; color: #6b7280; margin-top: 26px; font-size: 14px; }
+
+/* ---- forms ---- */
+
+label {
+    display: block;
+    font-weight: 600;
+    margin: 16px 0 5px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid #ccd2da;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #1a56c4;
+    box-shadow: 0 0 0 3px rgba(26, 86, 196, .15);
+}
+
+small.hint { color: #7a828e; font-weight: 400; display: block; margin-top: 5px; font-size: 13px; }
+
+button {
+    margin-top: 24px;
+    padding: 10px 22px;
+    font-size: 15px;
+    font-family: inherit;
+    border: 0;
+    border-radius: 6px;
+    background: #1a56c4;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover { background: #14459e; }
+button[disabled] { background: #a3abb7; cursor: not-allowed; }
+
+/* ---- messages ---- */
+
+.alert {
+    padding: 12px 14px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    border: 1px solid transparent;
+    font-size: 14px;
+}
+.alert-error   { background: #fdecec; border-color: #f2c4c4; color: #8c1d1d; }
+.alert-success { background: #eaf7ee; border-color: #bce3c6; color: #17632f; }
+.alert-info    { background: #eef3fb; border-color: #c8d6ee; color: #1b3f7a; }
+.alert ul { margin: 6px 0 0 18px; padding: 0; }
+.alert li { margin-top: 2px; }
+
+.field-message { font-size: 13px; margin-top: 5px; min-height: 18px; }
+.field-message.ok   { color: #17632f; }
+.field-message.bad  { color: #8c1d1d; }
+.field-message.busy { color: #7a828e; }
+
+/* ---- tables ---- */
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #edeff3; font-size: 14px; }
+th { color: #6b7280; font-weight: 600; width: 40%; }
+tr:last-child th, tr:last-child td { border-bottom: 0; }
+td small { color: #7a828e; }
+
+.actions { display: flex; gap: 8px; }
+.actions button { margin-top: 0; padding: 6px 14px; font-size: 13px; }
+.actions .danger { background: #a52a2a; }
+.actions .danger:hover { background: #8c1d1d; }
+
+.empty { color: #7a828e; margin: 0; }
+
+.card > h2:first-child { margin-top: 0; }
+
+.form-links { margin: 20px 0 0; font-size: 14px; }

@@ -1,0 +1,3 @@
+# Nothing in here is meant to be opened in a browser. The scripts refuse to
+# run outside the command line anyway; this is the second lock.
+Require all denied

@@ -1,0 +1,11 @@
+vendor/
+composer.lock
+
+# holds the Gmail app password
+config/mail.php
+
+# uploaded files, but keep the folders
+uploads/profile/*
+uploads/resume/*
+uploads/documents/*
+!uploads/*/.gitkeep

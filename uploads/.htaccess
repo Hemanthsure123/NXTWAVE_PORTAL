@@ -1,0 +1,7 @@
+# No direct access to anything in here.
+#
+# These are government IDs and resumes. Before this rule, anyone who learned
+# a file's URL could read it without logging in - a random filename is not a
+# password. Documents are served by public/document.php, which checks who is
+# asking first.
+Require all denied
